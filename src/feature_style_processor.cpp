@@ -24,6 +24,7 @@
 
 #include <mapnik/feature_style_processor_impl.hpp>
 #include <mapnik/agg_renderer.hpp>
+#include <mapnik/custom_agg_renderer.hpp>
 #include <mapnik/image_any.hpp>
 
 #if defined(GRID_RENDERER)
@@ -55,5 +56,7 @@ template class MAPNIK_DECL feature_style_processor<grid_renderer<grid>>;
 #endif
 
 template class MAPNIK_DECL feature_style_processor<agg_renderer<image_rgba8>>;
+
+template class MAPNIK_DECL feature_style_processor<custom_agg_renderer<image_rgba8>>;
 
 } // namespace mapnik

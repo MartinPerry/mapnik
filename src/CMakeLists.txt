@@ -186,6 +186,24 @@ target_sources(mapnik PRIVATE
 )
 
 target_sources(mapnik PRIVATE
+    custom_agg/custom_agg_renderer.cpp
+    custom_agg/process_building_symbolizer.cpp
+    custom_agg/process_debug_symbolizer.cpp
+    custom_agg/process_dot_symbolizer.cpp
+    custom_agg/process_group_symbolizer.cpp
+    custom_agg/process_line_pattern_symbolizer.cpp
+    custom_agg/process_line_symbolizer.cpp
+    custom_agg/process_markers_symbolizer.cpp
+    custom_agg/process_point_symbolizer.cpp
+    custom_agg/process_polygon_pattern_symbolizer.cpp
+    custom_agg/process_polygon_symbolizer.cpp
+    custom_agg/process_raster_symbolizer.cpp
+    custom_agg/process_shield_symbolizer.cpp
+    custom_agg/process_text_symbolizer.cpp
+)
+
+
+target_sources(mapnik PRIVATE
     css/css_color_grammar_x3.cpp
     css/css_grammar_x3.cpp
 )

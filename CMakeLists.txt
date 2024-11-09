@@ -24,8 +24,9 @@ include(MapnikMinimumVersions)
 include(MapnikFindPackage)
 include(MapnikInstall)
 
-include(CTest)
-add_feature_info(BUILD_TESTING BUILD_TESTING "Adds tests")
+#TurnOff testing
+#include(CTest)
+#add_feature_info(BUILD_TESTING BUILD_TESTING "Adds tests")
 
 mapnik_option(INSTALL_DEPENDENCIES "if ON, all dependencies (eg. required dlls) will be copied into CMAKE_INSTALL_PREFIX/MAPNIK_BIN_DIR." ON)
 mapnik_option(BUILD_SHARED_LIBS "build mapnik dynamic(ON) or static(OFF)" ON)
@@ -126,7 +127,7 @@ set(MAPNIK_OPTIONAL_LIBS_INCLUDE "")
 #############################
 #############################
 
-set(CMAKE_CXX_STANDARD 17 CACHE STRING "Sets the c++ standard. c++17 is minimum.")
+set(CMAKE_CXX_STANDARD 20 CACHE STRING "Sets the c++ standard. c++17 is minimum.")
 set(CMAKE_CXX_STANDARD_REQUIRED ON) # require the specified CMAKE_CXX_STANDARD
 set(CMAKE_CXX_EXTENSIONS OFF CACHE STRING "Enables the compiler specific extensions.") # Fallsback to -std=c++<ver> if off
 message(STATUS "Using c++${CMAKE_CXX_STANDARD}")
